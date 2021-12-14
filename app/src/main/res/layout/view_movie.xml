@@ -21,7 +21,6 @@
         android:text="Rivian raises dsdsf"
 
         android:layout_marginEnd="@dimen/_4sdp"
-        app:layout_constraintEnd_toStartOf="@id/fav_icon"
         android:textColor="@color/black"
         android:layout_marginTop="@dimen/_4sdp"
         app:layout_constraintStart_toStartOf="@id/movie_poster"
@@ -48,15 +47,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/fav_icon"
-        android:layout_width="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_4sdp"
-        app:layout_constraintEnd_toEndOf="@id/movie_poster"
-        app:layout_constraintTop_toBottomOf="@id/movie_poster"
-        android:src="@drawable/ic_baseline_favorite_24"
-        android:layout_height="@dimen/_16sdp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
