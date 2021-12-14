@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "789753686938",
+    "project_id": "fasaltaskintern",
+    "storage_bucket": "fasaltaskintern.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789753686938:android:5a210f33d86f2172d9a823",
+        "android_client_info": {
+          "package_name": "com.example.fasakinternshiptask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789753686938-duhhlhvsvh8shrcpi3sq1b7nal0ca499.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fasakinternshiptask",
+            "certificate_hash": "d6e2bfd4e712178fa3ee80a7e88e9f4670af402c"
+          }
+        },
+        {
+          "client_id": "789753686938-7q4cr936rc7jhrnrolfpk7i231r2gadc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_0qwru4H7Nq_Tit42l1KoKRD3asGLJJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789753686938-7q4cr936rc7jhrnrolfpk7i231r2gadc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
