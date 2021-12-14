@@ -8,9 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.fasakinternshiptask.MainActivity
 import com.example.fasakinternshiptask.R
 import com.example.fasakinternshiptask.databinding.FragmentLoginBinding
+import com.example.fasakinternshiptask.main.MovieSearchAcitivty
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -40,7 +40,7 @@ class LoginFragment : Fragment() {
             else {
                 if(it.isEmailVerified) {
                     toastShort(requireContext(), "Logged In")
-                    startActivity(Intent(requireActivity(), MainActivity::class.java))
+                    startActivity(Intent(requireActivity(), MovieSearchAcitivty::class.java))
                     requireActivity().finish()
                 } else {
                     showLoginScreen()
@@ -76,7 +76,7 @@ class LoginFragment : Fragment() {
                             val currentUser = auth.currentUser
                             if(currentUser!!.isEmailVerified) {
                                 toastShort(requireContext(), "Logged In")
-                                startActivity(Intent(requireActivity(), MainActivity::class.java))
+                                startActivity(Intent(requireActivity(), MovieSearchAcitivty::class.java))
                                 requireActivity().finish()
                             } else {
                                 toastShort(requireContext(), "Verify Email")

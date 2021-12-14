@@ -5,9 +5,12 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.14967105263157895" />
         <entry key="app/src/main/res/layout/activity_auth.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24572368421052632" />
+        <entry key="app/src/main/res/layout/activity_movie_search_acitivty.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.18" />
         <entry key="app/src/main/res/layout/loading_dialog.xml" value="0.1394736842105263" />
+        <entry key="app/src/main/res/layout/view_movie.xml" value="0.16" />
       </map>
     </option>
   </component>

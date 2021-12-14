@@ -22,7 +22,6 @@ class RegisterFragment : Fragment() {
     private lateinit var binding: FragmentRegisterBinding
     private lateinit var auth: FirebaseAuth
     private val ERROR = "This field is required."
-    private lateinit var loadingDialog: LoadingDialog
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +31,6 @@ class RegisterFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_register, container, false)
         binding = FragmentRegisterBinding.bind(view)
 
-        loadingDialog = LoadingDialog(requireActivity())
 
         auth = Firebase.auth
 
@@ -81,18 +79,19 @@ class RegisterFragment : Fragment() {
             val bool = checkValidityOfRegisterFields(name, age, email, password, birthday)
 
             if (bool) {
-                loadingDialog.startLoading()
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener {
-                        loadingDialog.stopLoading()
                         if (it.isSuccessful) {
                             generateUser(name, email, age, birthday)
                             val current = auth.currentUser!!
                             toastShort(requireContext(), "Verification email sent to $email")
                             current.sendEmailVerification()
                         } else {
-                            toastShort(requireContext(), "Error")
+
                         }
+                    }
+                    .addOnFailureListener {
+                        toastShort(requireContext(), it.message!!)
                     }
             }
 
@@ -133,7 +132,7 @@ class RegisterFragment : Fragment() {
         } else if (password.isEmpty()) {
             showError(binding.passwordInputLayout2, ERROR)
             isAllFieldsValid = false
-        } else if (password.length < 5) {
+        } else if (password.length < 6) {
             showError(binding.passwordInputLayout2, "Password length should be greater than 5")
             isAllFieldsValid = false
         } else if (name.isEmpty()) {

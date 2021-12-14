@@ -5,6 +5,8 @@ object Constants {
     const val INTENT_USER_NAME = "user_name"
     const val DATABASE_TODO_REF = "Todo"
     const val shared_pref = "com.lifeSkills.key2IQ"
+    const val API_KEY = "5b53ec22"
+    const val BASE_URL = "https://www.omdbapi.com/"
 
     fun removeSpecialCharacters(string: String): String {
         return string.replace(Regex("[^A-Za-z0-9 ]"),"")
